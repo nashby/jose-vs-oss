@@ -2,7 +2,7 @@
   "version": "0.1",
   "manifest_version": 2,
   "name": "Jose vs OSS",
-  "description": "Help Jose to fight with Gihub issues",
+  "description": "Help Jose to fight Gihub issues",
 
   "icons": {
     "16":  "icon-16.png",
