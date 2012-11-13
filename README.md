@@ -4,7 +4,7 @@
 
 He's José Valim. He does a lot of open source. So let's help him to fight Gihub issues.
 
-It's Google Chrome extension that adds 4 additional buttons to help @josevalim manage open source projects on Github.
+It's Google Chrome extension that adds 4 additional buttons to help [@josevalim](https://github.com/josevalim) manage open source projects on Github.
 
   * **Sample app** button - post comment with the following text: 'Can you please provide a sample application that reproduces the error?'
   * **Wiki** button - close an issue with the following text: 'The wiki is maintained by the community. So if there aren't any up to date instructions, we recommend you to explore the solution yourself and hopefully contribute your findings back!'
