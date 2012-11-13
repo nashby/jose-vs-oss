@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "manifest_version": 2,
+  "name": "Jose vs OSS",
+  "description": "Help Jose to fight with Gihub issues",
+
+  "icons": {
+    "16":  "icon-16.png",
+    "48":  "icon-48.png",
+    "128": "icon-128.png"
+  },
+
+  "content_scripts": [ {
+    "js":      [ "jose.js" ],
+    "matches": [ "https://github.com/*" ],
+    "run_at":  "document_idle"
+  } ]
+}
