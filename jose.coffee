@@ -23,10 +23,7 @@ if commentForm
       do event.preventDefault
       textarea.innerHTML = innerHtml
 
-      if closable
-        do close.click
-      else
-        do comment.click
+      if closable then do close.click else do comment.click
 
       textarea.innerHTML = ''
 
