@@ -52,8 +52,8 @@ if commentForm
     btn = button "<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/shipit.png' width='14' height='14'>", ":shipit:", false
     div.appendChild btn
 
-    # Crocodile + Baby Bottle
-    btn = button "<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/crocodile.png' width='14' height='14'>", ":crocodile: :baby_bottle:", false
+    # Hearts
+    btn = button "<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/heart.png' width='14' height='14'>", ":heart: :green_heart: :blue_heart: :yellow_heart: :purple_heart:", false
     div.appendChild btn
 
     actions.appendChild div

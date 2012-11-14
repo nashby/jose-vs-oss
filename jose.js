@@ -50,7 +50,7 @@
       div.appendChild(btn);
       btn = button("<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/shipit.png' width='14' height='14'>", ":shipit:", false);
       div.appendChild(btn);
-      btn = button("<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/crocodile.png' width='14' height='14'>", ":crocodile: :baby_bottle:", false);
+      btn = button("<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/heart.png' width='14' height='14'>", ":heart: :green_heart: :blue_heart: :yellow_heart: :purple_heart:", false);
       div.appendChild(btn);
       return actions.appendChild(div);
     };
