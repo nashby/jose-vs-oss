@@ -11,9 +11,8 @@ if commentForm
 
   button = (text, innerHtml, closable = true) ->
     btn = document.createElement 'button'
-    text = document.createTextNode text
 
-    btn.appendChild text
+    btn.innerHTML = text
     btn.className = 'classy'
     btn.setAttribute 'tabindex', '1'
     btn.setAttribute 'type', 'submit'
@@ -47,6 +46,14 @@ if commentForm
 
     # Bug report
     btn = button "Bad bug report", "You need to give us more information on how to reproduce this issue, otherwise there is nothing we can do. Please read CONTRIBUTING.md file for more information about creating bug reports. Thanks!"
+    div.appendChild btn
+
+    # Shipit Squirrel
+    btn = button "<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/shipit.png' width='14' height='14'>", ":shipit:", false
+    div.appendChild btn
+
+    # Crocodile + Baby Bottle
+    btn = button "<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/crocodile.png' width='14' height='14'>", ":crocodile: :baby_bottle:", false
     div.appendChild btn
 
     actions.appendChild div
