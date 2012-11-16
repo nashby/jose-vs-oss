@@ -1,15 +1,28 @@
 commentForm = document.querySelector '.js-new-comment-form'
 
+selectElements = =>
+  @actions        = commentForm.querySelector '.form-actions'
+  @bubblesContent = document.querySelectorAll '.discussion-bubble.js-comment-container'
+  @bubble         = bubblesContent[bubblesContent.length - 1]
+  @close          = actions.querySelector '.js-comment-and-button'
+  @comment        = actions.querySelector '.primary'
+  @textarea       = commentForm.querySelector 'textarea'
+  @tip            = actions.querySelector '.tip'
+
 if commentForm
-  actions     = commentForm.querySelector '.form-actions'
-  close       = actions.querySelector '.js-comment-and-button'
-  comment     = actions.querySelector '.primary'
-  textarea    = commentForm.querySelector 'textarea'
-  tip         = actions.querySelector '.tip'
+  do selectElements
 
-  actions.removeChild(tip) if tip
+  MutationObserver = WebKitMutationObserver or MozMutationObserver
 
-  button = (text, innerHtml, closable = true) ->
+  observer = new MutationObserver (mutations) ->
+    mutations.forEach (mutation) ->
+      do selectElements
+
+  observer.observe @actions, childList: true
+
+  @actions.removeChild(@tip) if @tip
+
+  button = (text, innerHtml, closable = true) =>
     btn = document.createElement 'button'
 
     btn.innerHTML = text
@@ -18,19 +31,19 @@ if commentForm
     btn.setAttribute 'type', 'submit'
     btn.setAttribute 'style', 'margin-right: 4px;'
 
-    btn.addEventListener 'click', (event) ->
+    btn.addEventListener 'click', (event) =>
       do event.preventDefault
       textarea.innerHTML = innerHtml
 
-      if closable then do close.click else do comment.click
+      if closable then do @close.click else do @comment.click
 
-      textarea.innerHTML = ''
+      @textarea.innerHTML = ''
 
     btn
 
-  insertButtons = ->
+  insertButtons = =>
     div = document.createElement 'div'
-    div.setAttribute 'style', 'float: left'
+    div.setAttribute 'style', 'float: left; margin: -38px 0px 0px 60px;'
 
     # Sample application
     btn = button 'Sample app', 'Can you please provide a sample application that reproduces the error?', false
@@ -56,6 +69,6 @@ if commentForm
     btn = button "<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/heart.png' width='14' height='14'>", ":heart: :green_heart: :blue_heart: :yellow_heart: :purple_heart:", false
     div.appendChild btn
 
-    actions.appendChild div
+    @bubble.appendChild div
 
-  do insertButtons if commentForm && close
+  do insertButtons if commentForm && @close
