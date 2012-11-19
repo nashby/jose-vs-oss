@@ -3,11 +3,11 @@ commentForm = document.querySelector '.js-new-comment-form'
 selectElements = =>
   @actions        = commentForm.querySelector '.form-actions'
   @bubblesContent = document.querySelectorAll '.discussion-bubble.js-comment-container'
-  @bubble         = bubblesContent[bubblesContent.length - 1]
-  @close          = actions.querySelector '.js-comment-and-button'
-  @comment        = actions.querySelector '.primary'
+  @bubble         = @bubblesContent[@bubblesContent.length - 1]
+  @close          = @actions.querySelector '.js-comment-and-button'
+  @comment        = @actions.querySelector '.primary'
   @textarea       = commentForm.querySelector 'textarea'
-  @tip            = actions.querySelector '.tip'
+  @tip            = @actions.querySelector '.tip'
 
 if commentForm
   do selectElements
@@ -33,7 +33,7 @@ if commentForm
 
     btn.addEventListener 'click', (event) =>
       do event.preventDefault
-      textarea.innerHTML = innerHtml
+      @textarea.innerHTML = innerHtml
 
       if closable then do @close.click else do @comment.click
 
