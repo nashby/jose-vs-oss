@@ -8,11 +8,11 @@
   selectElements = function() {
     _this.actions = commentForm.querySelector('.form-actions');
     _this.bubblesContent = document.querySelectorAll('.discussion-bubble.js-comment-container');
-    _this.bubble = bubblesContent[bubblesContent.length - 1];
-    _this.close = actions.querySelector('.js-comment-and-button');
-    _this.comment = actions.querySelector('.primary');
+    _this.bubble = _this.bubblesContent[_this.bubblesContent.length - 1];
+    _this.close = _this.actions.querySelector('.js-comment-and-button');
+    _this.comment = _this.actions.querySelector('.primary');
     _this.textarea = commentForm.querySelector('textarea');
-    return _this.tip = actions.querySelector('.tip');
+    return _this.tip = _this.actions.querySelector('.tip');
   };
 
   if (commentForm) {
@@ -42,7 +42,7 @@
       btn.setAttribute('style', 'margin-right: 4px;');
       btn.addEventListener('click', function(event) {
         event.preventDefault();
-        textarea.innerHTML = innerHtml;
+        _this.textarea.innerHTML = innerHtml;
         if (closable) {
           _this.close.click();
         } else {
