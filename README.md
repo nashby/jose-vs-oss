@@ -19,7 +19,7 @@ It's Google Chrome extension that adds 4 additional buttons to help [@josevalim]
 
 ### Current status ###
 
-It's not in Chrome Web Store yet but it definitely will be there soon. For now you can install this in two ways:
+It's in Chrome Web Store - https://chrome.google.com/webstore/detail/jose-vs-oss/gedgfhlllblnfgmdfemiiepeldmppgmk. Also you can install this in two other ways:
 
   * clone this repo, go to the `chrome://chrome/extensions/`, switch to 'Developer mode' on and 'Load unpacked extension'.
   * or you can use [dotjs](https://github.com/defunkt/dotjs). `wget https://github.com/nashby/jose-vs-oss/raw/master/jose.js -O ~/.js/github.com.js`
