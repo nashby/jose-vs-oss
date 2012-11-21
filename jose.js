@@ -11,8 +11,7 @@
     _this.bubble = _this.bubblesContent[_this.bubblesContent.length - 1];
     _this.close = _this.actions.querySelector('.js-comment-and-button');
     _this.comment = _this.actions.querySelector('.primary');
-    _this.textarea = commentForm.querySelector('textarea');
-    return _this.tip = _this.actions.querySelector('.tip');
+    return _this.textarea = commentForm.querySelector('textarea');
   };
 
   if (commentForm) {
@@ -26,9 +25,6 @@
     observer.observe(this.actions, {
       childList: true
     });
-    if (this.tip) {
-      this.actions.removeChild(this.tip);
-    }
     button = function(text, innerHtml, closable) {
       var btn;
       if (closable == null) {

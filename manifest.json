@@ -12,6 +12,7 @@
 
   "content_scripts": [ {
     "js":      [ "jose.js" ],
+    "css":     [ "jose.css" ],
     "matches": [ "https://github.com/*" ],
     "run_at":  "document_idle"
   } ]

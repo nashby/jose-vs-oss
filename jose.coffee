@@ -7,7 +7,6 @@ selectElements = =>
   @close          = @actions.querySelector '.js-comment-and-button'
   @comment        = @actions.querySelector '.primary'
   @textarea       = commentForm.querySelector 'textarea'
-  @tip            = @actions.querySelector '.tip'
 
 if commentForm
   do selectElements
@@ -19,8 +18,6 @@ if commentForm
       do selectElements
 
   observer.observe @actions, childList: true
-
-  @actions.removeChild(@tip) if @tip
 
   button = (text, innerHtml, closable = true) =>
     btn = document.createElement 'button'
