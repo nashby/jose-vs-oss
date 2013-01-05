@@ -1,2 +1,2 @@
-## 0.4
-  * add title to buttons [@lucasmazza](http://github.com/lucasmazza)
+### 0.4
+  * add title to buttons. Thanks to [@lucasmazza](http://github.com/lucasmazza)
