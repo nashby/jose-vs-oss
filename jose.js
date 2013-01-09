@@ -32,7 +32,7 @@
       }
       btn = document.createElement('button');
       btn.innerHTML = text;
-      btn.className = 'classy';
+      btn.className = 'button';
       btn.setAttribute('tabindex', '1');
       btn.setAttribute('type', 'submit');
       btn.setAttribute('title', innerHTML);
