@@ -23,7 +23,7 @@ if commentForm
     btn = document.createElement 'button'
 
     btn.innerHTML = text
-    btn.className = 'classy'
+    btn.className = 'button'
     btn.setAttribute 'tabindex', '1'
     btn.setAttribute 'type', 'submit'
     btn.setAttribute 'style', 'margin-right: 4px;'
