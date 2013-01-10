@@ -1,3 +1,5 @@
+### 0.42
+  * fix button's title
 ### 0.41
   * update button class to be compatible with github's changes. Thanks to [@lucasmazza](http://github.com/lucasmazza)
 ### 0.4

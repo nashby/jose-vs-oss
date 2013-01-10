@@ -35,7 +35,7 @@
       btn.className = 'button';
       btn.setAttribute('tabindex', '1');
       btn.setAttribute('type', 'submit');
-      btn.setAttribute('title', innerHTML);
+      btn.setAttribute('title', innerHtml);
       btn.setAttribute('style', 'margin-right: 4px;');
       btn.addEventListener('click', function(event) {
         event.preventDefault();
