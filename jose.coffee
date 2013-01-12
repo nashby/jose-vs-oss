@@ -31,17 +31,17 @@ if commentForm
 
     btn.addEventListener 'click', (event) =>
       do event.preventDefault
-      @textarea.innerHTML = innerHtml
+      @textarea.value = innerHtml
 
       if closable then do @close.click else do @comment.click
 
-      @textarea.innerHTML = ''
+      @textarea.value = ''
 
     btn
 
   insertButtons = =>
     div = document.createElement 'div'
-    div.setAttribute 'style', 'float: left; margin: -38px 0px 0px 60px;'
+    div.setAttribute 'style', 'float: left; margin: -40px 0px 0px 60px;'
 
     # Sample application
     btn = button 'Sample app', 'Can you please provide a sample application that reproduces the error?', false
@@ -52,7 +52,7 @@ if commentForm
     div.appendChild btn
 
     # Mailing list
-    btn = button "Mailing list", "Please use the mailing list or StackOverflow for questions"
+    btn = button "ML", "Please use the mailing list or StackOverflow for questions"
     div.appendChild btn
 
     # Bug report

@@ -39,25 +39,25 @@
       btn.setAttribute('style', 'margin-right: 4px;');
       btn.addEventListener('click', function(event) {
         event.preventDefault();
-        _this.textarea.innerHTML = innerHtml;
+        _this.textarea.value = innerHtml;
         if (closable) {
           _this.close.click();
         } else {
           _this.comment.click();
         }
-        return _this.textarea.innerHTML = '';
+        return _this.textarea.value = '';
       });
       return btn;
     };
     insertButtons = function() {
       var btn, div;
       div = document.createElement('div');
-      div.setAttribute('style', 'float: left; margin: -38px 0px 0px 60px;');
+      div.setAttribute('style', 'float: left; margin: -40px 0px 0px 60px;');
       btn = button('Sample app', 'Can you please provide a sample application that reproduces the error?', false);
       div.appendChild(btn);
       btn = button("Wiki", "The wiki is maintained by the community. So if there aren't any up to date instructions, we recommend you to explore the solution yourself and hopefully contribute your findings back!");
       div.appendChild(btn);
-      btn = button("Mailing list", "Please use the mailing list or StackOverflow for questions");
+      btn = button("ML", "Please use the mailing list or StackOverflow for questions");
       div.appendChild(btn);
       btn = button("Bad bug report", "You need to give us more information on how to reproduce this issue, otherwise there is nothing we can do. Please read CONTRIBUTING.md file for more information about creating bug reports. Thanks!");
       div.appendChild(btn);
