@@ -31,7 +31,7 @@ if commentForm
 
     btn.addEventListener 'click', (event) =>
       do event.preventDefault
-      @textarea.value = innerHtml
+      @textarea.value += " #{innerHtml}"
 
       if closable then do @close.click else do @comment.click
 

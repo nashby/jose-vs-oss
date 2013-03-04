@@ -39,7 +39,7 @@
       btn.setAttribute('style', 'margin-right: 4px;');
       btn.addEventListener('click', function(event) {
         event.preventDefault();
-        _this.textarea.value = innerHtml;
+        _this.textarea.value += " " + innerHtml;
         if (closable) {
           _this.close.click();
         } else {
