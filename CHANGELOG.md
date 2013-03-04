@@ -1,3 +1,7 @@
+### 0.44
+  * append button's text to the text area instead of replacing current content. Thanks to [@lucasmazza](http://github.com/lucasmazza)
+    for the idea.
+
 ### 0.43
   * change "Mailing list" button name to "ML" to fit in screen
   * fix bug when we can't use buttons after typing anything in comment form.
