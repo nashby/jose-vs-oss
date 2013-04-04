@@ -52,7 +52,7 @@ if commentForm
     div.appendChild btn
 
     # Mailing list
-    btn = button "ML", "Please use the mailing list or StackOverflow for questions"
+    btn = button "ML", "Please use the mailing list or StackOverflow for questions/help, where a wider community will be able to help you. We reserve the issues tracker for issues only."
     div.appendChild btn
 
     # Bug report
