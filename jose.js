@@ -57,7 +57,7 @@
       div.appendChild(btn);
       btn = button("Wiki", "The wiki is maintained by the community. So if there aren't any up to date instructions, we recommend you to explore the solution yourself and hopefully contribute your findings back!");
       div.appendChild(btn);
-      btn = button("ML", "Please use the mailing list or StackOverflow for questions");
+      btn = button("ML", "Please use the mailing list or StackOverflow for questions/help, where a wider community will be able to help you. We reserve the issues tracker for issues only.");
       div.appendChild(btn);
       btn = button("Bad bug report", "You need to give us more information on how to reproduce this issue, otherwise there is nothing we can do. Please read CONTRIBUTING.md file for more information about creating bug reports. Thanks!");
       div.appendChild(btn);
