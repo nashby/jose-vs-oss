@@ -1,0 +1,9 @@
+{
+  "name": "jose-vs-oss",
+  "fullName": "jose-vs-oss",
+  "id": "jid1-jP1BWyYjkAIWqg",
+  "description": "It's Firefox addon that adds 6 additional buttons to help @josevalim manage open source projects on Github",
+  "author": "Vasiliy Ermolovich",
+  "license": "MPL 2.0",
+  "version": "0.50"
+}

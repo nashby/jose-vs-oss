@@ -11,9 +11,13 @@ selectElements = =>
 if commentForm
   do selectElements
 
-  MutationObserver = WebKitMutationObserver or MozMutationObserver
+  mutationObserver =
+    if WebKitMutationObserver?
+      WebKitMutationObserver
+    else
+      MutationObserver
 
-  observer = new MutationObserver (mutations) ->
+  observer = new mutationObserver (mutations) ->
     mutations.forEach (mutation) ->
       do selectElements
 
@@ -41,15 +45,15 @@ if commentForm
   insertButtons = =>
     closeButtonGroupTitle           = document.createElement 'span'
     closeButtonGroupTitle.setAttribute 'style', 'float: left; margin: 0px 0px 0px 61px;'
-    closeButtonGroupTitle.innerText = 'Close this issue'
+    closeButtonGroupTitle.textContent = 'Close this issue'
 
     closeButtonGroup            = document.createElement 'div'
     closeButtonGroup.className  = 'button-group'
     closeButtonGroup.setAttribute 'style', 'float: left; margin: -40px 0px 0px 60px;'
 
-    openButtonGroupTitle            = document.createElement 'span'
+    openButtonGroupTitle              = document.createElement 'span'
     openButtonGroupTitle.setAttribute 'style', 'float: left; margin: 0px 0px 0px 156px;'
-    openButtonGroupTitle.innerText  = 'Keep it open'
+    openButtonGroupTitle.textContent  = 'Keep it open'
 
     openButtonGroup             = document.createElement 'div'
     openButtonGroup.className   = 'button-group'

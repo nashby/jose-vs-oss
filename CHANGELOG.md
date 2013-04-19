@@ -1,4 +1,7 @@
-### 0.5
+### 0.51
+  * Firefox compatibility.
+
+### 0.50
   * Differentiate buttons that will close a ticket vs just posting a comment. Thanks to [@lucasmazza](http://github.com/lucasmazza) and [@alloy](http://github.com/alloy)
 
 ### 0.45
