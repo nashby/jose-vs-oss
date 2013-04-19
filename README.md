@@ -4,7 +4,7 @@
 
 He's José Valim. He does a lot of open source. So let's help him to fight Gihub issues.
 
-It's Google Chrome extension that adds 6 additional buttons to help [@josevalim](https://github.com/josevalim) manage open source projects on Github.
+It's Google Chrome and Firefox extension that adds 6 additional buttons to help [@josevalim](https://github.com/josevalim) manage open source projects on Github.
 
   * **Sample app** button - post comment with the following text: *Can you please provide a sample application that reproduces the error?*
   * **Wiki** button - close an issue with the following text: *The wiki is maintained by the community. So if there aren't any up to date instructions, we recommend you to explore the solution yourself and hopefully contribute your findings back!*
@@ -23,3 +23,5 @@ It's in Chrome Web Store - https://chrome.google.com/webstore/detail/jose-vs-oss
 
   * clone this repo, go to the `chrome://chrome/extensions/`, switch to 'Developer mode' on and 'Load unpacked extension'.
   * or you can use [dotjs](https://github.com/defunkt/dotjs). `wget https://github.com/nashby/jose-vs-oss/raw/master/jose.js -O ~/.js/github.com.js`
+
+It's in Firefox addons store too! It's not reviewed yet but you can intall it anyway - https://addons.mozilla.org/en-US/firefox/addon/jose-vs-oss/
