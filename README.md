@@ -15,7 +15,7 @@ It's Google Chrome extension that adds 6 additional buttons to help [@josevalim]
 
 ### Screenshots ###
 
-![1](http://i.imgur.com/vtxl6.jpg)
+![1](http://i.imgur.com/C31nL43.png)
 
 ### Current status ###
 
