@@ -24,4 +24,4 @@ It's in Chrome Web Store - https://chrome.google.com/webstore/detail/jose-vs-oss
   * clone this repo, go to the `chrome://chrome/extensions/`, switch to 'Developer mode' on and 'Load unpacked extension'.
   * or you can use [dotjs](https://github.com/defunkt/dotjs). `wget https://github.com/nashby/jose-vs-oss/raw/master/jose.js -O ~/.js/github.com.js`
 
-It's in Firefox addons store too! It's not reviewed yet but you can intall it anyway - https://addons.mozilla.org/en-US/firefox/addon/jose-vs-oss/
+It's in Firefox addons store too! It's not reviewed yet but you can install it anyway - https://addons.mozilla.org/en-US/firefox/addon/jose-vs-oss/
