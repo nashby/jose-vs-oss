@@ -2,9 +2,9 @@
 
 ![@josevalim](http://farm8.staticflickr.com/7263/6956146106_3b4985c2d4.jpg)
 
-He's José Valim. He does a lot of open source. So let's help him to fight Gihub issues.
+He's José Valim. He does a lot of open source. So let's help him to fight GitHub issues.
 
-It's Google Chrome and Firefox extension that adds 6 additional buttons to help [@josevalim](https://github.com/josevalim) manage open source projects on Github.
+It's Google Chrome and Firefox extension that adds 6 additional buttons to help [@josevalim](https://github.com/josevalim) manage open source projects on GitHub.
 
   * **Sample app** button - post comment with the following text: *Can you please provide a sample application that reproduces the error?*
   * **Wiki** button - close an issue with the following text: *The wiki is maintained by the community. So if there aren't any up to date instructions, we recommend you to explore the solution yourself and hopefully contribute your findings back!*
