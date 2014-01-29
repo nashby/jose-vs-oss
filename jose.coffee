@@ -2,8 +2,7 @@ commentForm = document.querySelector '.js-new-comment-form'
 
 selectElements = =>
   @actions        = commentForm.querySelector '.form-actions'
-  @bubblesContent = document.querySelectorAll '.discussion-bubble.js-comment-container'
-  @bubble         = @bubblesContent[@bubblesContent.length - 1]
+  @protip         = commentForm.querySelector '.form-actions-protip'
   @close          = @actions.querySelector '.js-comment-and-button'
   @comment        = @actions.querySelector '.primary'
   @textarea       = commentForm.querySelector 'textarea'
@@ -44,20 +43,20 @@ if commentForm
 
   insertButtons = =>
     closeButtonGroupTitle           = document.createElement 'span'
-    closeButtonGroupTitle.setAttribute 'style', 'float: left; margin: 0px 0px 0px 61px;'
+    closeButtonGroupTitle.setAttribute 'style', 'float: left; margin: 5px 0px 0px 0px;'
     closeButtonGroupTitle.textContent = 'Close this issue'
 
     closeButtonGroup            = document.createElement 'div'
     closeButtonGroup.className  = 'button-group'
-    closeButtonGroup.setAttribute 'style', 'float: left; margin: -40px 0px 0px 60px;'
+    closeButtonGroup.setAttribute 'style', 'float: left; margin: -35px 0px 0px 0px;'
 
     openButtonGroupTitle              = document.createElement 'span'
-    openButtonGroupTitle.setAttribute 'style', 'float: left; margin: 0px 0px 0px 156px;'
+    openButtonGroupTitle.setAttribute 'style', 'float: left; margin: 5px 0px 0px 130px;'
     openButtonGroupTitle.textContent  = 'Keep it open'
 
     openButtonGroup             = document.createElement 'div'
     openButtonGroup.className   = 'button-group'
-    openButtonGroup.setAttribute  'style', 'float: left; margin: -40px 0px 0px 155px;'
+    openButtonGroup.setAttribute  'style', 'float: left; margin: -35px 0px 0px 130px;'
 
     # Sample application
     btn = button 'Sample app', 'Can you please provide a sample application that reproduces the error?', false
@@ -83,10 +82,17 @@ if commentForm
     btn = button "<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/heart.png' width='14' height='14'>", ":heart: :green_heart: :blue_heart: :yellow_heart: :purple_heart:", false
     openButtonGroup.appendChild btn
 
-    @bubble.appendChild closeButtonGroup
-    @bubble.appendChild closeButtonGroupTitle
+    @actions.appendChild closeButtonGroup
+    @actions.appendChild closeButtonGroupTitle
 
-    @bubble.appendChild openButtonGroup
-    @bubble.appendChild openButtonGroupTitle
+    @actions.appendChild openButtonGroup
+    @actions.appendChild openButtonGroupTitle
+
+    clearfix = document.createElement 'div'
+    clearfix.setAttribute 'style', 'clear:both;'
+
+    @actions.appendChild clearfix
+
+    @protip?.remove()
 
   do insertButtons if commentForm && @close
