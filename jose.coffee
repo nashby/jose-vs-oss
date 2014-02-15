@@ -35,7 +35,7 @@ if commentForm
       do event.preventDefault
       @textarea.value += " #{innerHtml}"
 
-      if closable then do @close.click else do @comment.click
+      if closable && @close then do @close.click else do @comment.click
 
       @textarea.value = ''
 
@@ -56,7 +56,11 @@ if commentForm
 
     openButtonGroup             = document.createElement 'div'
     openButtonGroup.className   = 'button-group'
-    openButtonGroup.setAttribute  'style', 'float: left; margin: -35px 0px 0px 130px;'
+
+    if @close
+      openButtonGroup.setAttribute  'style', 'float: left; margin: -35px 0px 0px 130px;'
+    else
+      openButtonGroup.setAttribute  'style', 'float: left; margin: -35px 0px 0px 220px;'
 
     # Sample application
     btn = button 'Sample app', 'Can you please provide a sample application that reproduces the error?', false
@@ -83,10 +87,10 @@ if commentForm
     openButtonGroup.appendChild btn
 
     @actions.appendChild closeButtonGroup
-    @actions.appendChild closeButtonGroupTitle
+    @actions.appendChild closeButtonGroupTitle if @close
 
     @actions.appendChild openButtonGroup
-    @actions.appendChild openButtonGroupTitle
+    @actions.appendChild openButtonGroupTitle if @close
 
     clearfix = document.createElement 'div'
     clearfix.setAttribute 'style', 'clear:both;'
@@ -95,4 +99,4 @@ if commentForm
 
     @protip?.remove()
 
-  do insertButtons if commentForm && @close
+  do insertButtons if commentForm
