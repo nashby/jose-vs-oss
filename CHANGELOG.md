@@ -1,3 +1,9 @@
+### 0.53
+  * Show buttons even if you can't close issues so you can just post a message.
+
+### 0.52
+  * New Github layout compatibility. Thanks to [@lucasmazza](http://github.com/lucasmazza)
+
 ### 0.51
   * Firefox compatibility.
 
