@@ -7,8 +7,7 @@
 
   selectElements = function() {
     _this.actions = commentForm.querySelector('.form-actions');
-    _this.bubblesContent = document.querySelectorAll('.discussion-bubble.js-comment-container');
-    _this.bubble = _this.bubblesContent[_this.bubblesContent.length - 1];
+    _this.protip = commentForm.querySelector('.form-actions-protip');
     _this.close = _this.actions.querySelector('.js-comment-and-button');
     _this.comment = _this.actions.querySelector('.primary');
     return _this.textarea = commentForm.querySelector('textarea');
@@ -39,7 +38,7 @@
       btn.addEventListener('click', function(event) {
         event.preventDefault();
         _this.textarea.value += " " + innerHtml;
-        if (closable) {
+        if (closable && _this.close) {
           _this.close.click();
         } else {
           _this.comment.click();
@@ -49,19 +48,23 @@
       return btn;
     };
     insertButtons = function() {
-      var btn, closeButtonGroup, closeButtonGroupTitle, openButtonGroup, openButtonGroupTitle;
+      var btn, clearfix, closeButtonGroup, closeButtonGroupTitle, openButtonGroup, openButtonGroupTitle, _ref;
       closeButtonGroupTitle = document.createElement('span');
-      closeButtonGroupTitle.setAttribute('style', 'float: left; margin: 0px 0px 0px 61px;');
+      closeButtonGroupTitle.setAttribute('style', 'float: left; margin: 5px 0px 0px 0px;');
       closeButtonGroupTitle.textContent = 'Close this issue';
       closeButtonGroup = document.createElement('div');
       closeButtonGroup.className = 'button-group';
-      closeButtonGroup.setAttribute('style', 'float: left; margin: -40px 0px 0px 60px;');
+      closeButtonGroup.setAttribute('style', 'float: left; margin: -35px 0px 0px 0px;');
       openButtonGroupTitle = document.createElement('span');
-      openButtonGroupTitle.setAttribute('style', 'float: left; margin: 0px 0px 0px 156px;');
+      openButtonGroupTitle.setAttribute('style', 'float: left; margin: 5px 0px 0px 130px;');
       openButtonGroupTitle.textContent = 'Keep it open';
       openButtonGroup = document.createElement('div');
       openButtonGroup.className = 'button-group';
-      openButtonGroup.setAttribute('style', 'float: left; margin: -40px 0px 0px 155px;');
+      if (_this.close) {
+        openButtonGroup.setAttribute('style', 'float: left; margin: -35px 0px 0px 130px;');
+      } else {
+        openButtonGroup.setAttribute('style', 'float: left; margin: -35px 0px 0px 220px;');
+      }
       btn = button('Sample app', 'Can you please provide a sample application that reproduces the error?', false);
       openButtonGroup.appendChild(btn);
       btn = button("Wiki", "The wiki is maintained by the community. So if there aren't any up to date instructions, we recommend you to explore the solution yourself and hopefully contribute your findings back!");
@@ -74,12 +77,20 @@
       openButtonGroup.appendChild(btn);
       btn = button("<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/heart.png' width='14' height='14'>", ":heart: :green_heart: :blue_heart: :yellow_heart: :purple_heart:", false);
       openButtonGroup.appendChild(btn);
-      _this.bubble.appendChild(closeButtonGroup);
-      _this.bubble.appendChild(closeButtonGroupTitle);
-      _this.bubble.appendChild(openButtonGroup);
-      return _this.bubble.appendChild(openButtonGroupTitle);
+      _this.actions.appendChild(closeButtonGroup);
+      if (_this.close) {
+        _this.actions.appendChild(closeButtonGroupTitle);
+      }
+      _this.actions.appendChild(openButtonGroup);
+      if (_this.close) {
+        _this.actions.appendChild(openButtonGroupTitle);
+      }
+      clearfix = document.createElement('div');
+      clearfix.setAttribute('style', 'clear:both;');
+      _this.actions.appendChild(clearfix);
+      return (_ref = _this.protip) != null ? _ref.remove() : void 0;
     };
-    if (commentForm && this.close) {
+    if (commentForm) {
       insertButtons();
     }
   }
