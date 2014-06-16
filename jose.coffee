@@ -42,9 +42,12 @@ if commentForm
     btn
 
   insertButtons = =>
-    closeButtonGroupTitle           = document.createElement 'span'
+    wrapper           = document.createElement 'div'
+    wrapper.className = 'jose-vs-oss'
+
+    closeButtonGroupTitle               = document.createElement 'span'
     closeButtonGroupTitle.setAttribute 'style', 'float: left; margin: 5px 0px 0px 0px;'
-    closeButtonGroupTitle.textContent = 'Close this issue'
+    closeButtonGroupTitle.textContent   = 'Close this issue'
 
     closeButtonGroup            = document.createElement 'div'
     closeButtonGroup.className  = 'button-group'
@@ -86,16 +89,18 @@ if commentForm
     btn = button "<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/heart.png' width='14' height='14'>", ":heart: :green_heart: :blue_heart: :yellow_heart: :purple_heart:", false
     openButtonGroup.appendChild btn
 
-    @actions.appendChild closeButtonGroup
-    @actions.appendChild closeButtonGroupTitle if @close
+    wrapper.appendChild closeButtonGroup
+    wrapper.appendChild closeButtonGroupTitle if @close
 
-    @actions.appendChild openButtonGroup
-    @actions.appendChild openButtonGroupTitle if @close
+    wrapper.appendChild openButtonGroup
+    wrapper.appendChild openButtonGroupTitle if @close
 
     clearfix = document.createElement 'div'
     clearfix.setAttribute 'style', 'clear:both;'
 
-    @actions.appendChild clearfix
+    wrapper.appendChild clearfix
+
+    @actions.appendChild wrapper
 
     @protip?.remove()
 

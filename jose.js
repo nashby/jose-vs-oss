@@ -48,7 +48,9 @@
       return btn;
     };
     insertButtons = function() {
-      var btn, clearfix, closeButtonGroup, closeButtonGroupTitle, openButtonGroup, openButtonGroupTitle, _ref;
+      var btn, clearfix, closeButtonGroup, closeButtonGroupTitle, openButtonGroup, openButtonGroupTitle, wrapper, _ref;
+      wrapper = document.createElement('div');
+      wrapper.className = 'jose-vs-oss';
       closeButtonGroupTitle = document.createElement('span');
       closeButtonGroupTitle.setAttribute('style', 'float: left; margin: 5px 0px 0px 0px;');
       closeButtonGroupTitle.textContent = 'Close this issue';
@@ -77,17 +79,18 @@
       openButtonGroup.appendChild(btn);
       btn = button("<img src='https://a248.e.akamai.net/assets.github.com/images/icons/emoji/heart.png' width='14' height='14'>", ":heart: :green_heart: :blue_heart: :yellow_heart: :purple_heart:", false);
       openButtonGroup.appendChild(btn);
-      _this.actions.appendChild(closeButtonGroup);
+      wrapper.appendChild(closeButtonGroup);
       if (_this.close) {
-        _this.actions.appendChild(closeButtonGroupTitle);
+        wrapper.appendChild(closeButtonGroupTitle);
       }
-      _this.actions.appendChild(openButtonGroup);
+      wrapper.appendChild(openButtonGroup);
       if (_this.close) {
-        _this.actions.appendChild(openButtonGroupTitle);
+        wrapper.appendChild(openButtonGroupTitle);
       }
       clearfix = document.createElement('div');
       clearfix.setAttribute('style', 'clear:both;');
-      _this.actions.appendChild(clearfix);
+      wrapper.appendChild(clearfix);
+      _this.actions.appendChild(wrapper);
       return (_ref = _this.protip) != null ? _ref.remove() : void 0;
     };
     if (commentForm) {
