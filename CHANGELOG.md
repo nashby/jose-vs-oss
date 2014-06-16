@@ -1,3 +1,6 @@
+### 0.54
+  * New Github layout compatibility.
+
 ### 0.53
   * Show buttons even if you can't close issues so you can just post a message.
 
