@@ -1,3 +1,6 @@
+### 0.55
+  * Fix buttons with image styling.
+
 ### 0.54
   * New Github layout compatibility.
 
