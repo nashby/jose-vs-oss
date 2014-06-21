@@ -10,3 +10,8 @@
   float: inherit !important;
   margin-left: -1px !important;
 }
+
+.jose-vs-oss .button img {
+  vertical-align: sub;
+}
+
