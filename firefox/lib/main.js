@@ -1,8 +1,8 @@
-var tabs = require("sdk/tabs");
-var self = require("sdk/self");
+var self    = require("sdk/self");
+var pageMod = require('sdk/page-mod');
 
-tabs.on('ready', function(tab) {
-  tab.attach({
-    contentScriptFile: self.data.url("jose.js")
-  });
+pageMod.PageMod({
+  include: "*.github.com",
+  contentStyleFile: self.data.url("jose.css"),
+  contentScriptFile: self.data.url("jose.js")
 });
