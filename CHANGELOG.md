@@ -1,3 +1,6 @@
+### 0.56
+  * Fix styles and images in the firefox extension.
+
 ### 0.55
   * Fix buttons with image styling.
 
