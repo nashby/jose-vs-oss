@@ -6,7 +6,7 @@ selectElements = =>
   @actions        = commentForm.querySelector '.form-actions'
   @protip         = commentForm.querySelector '.form-actions-protip'
   @close          = @actions.querySelector '.js-comment-and-button'
-  @comment        = @actions.querySelector '.primary'
+  @comment        = @actions.querySelector '.btn-primary'
   @textarea       = commentForm.querySelector 'textarea'
 
 if commentForm

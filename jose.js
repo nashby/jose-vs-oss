@@ -13,7 +13,7 @@
       _this.actions = commentForm.querySelector('.form-actions');
       _this.protip = commentForm.querySelector('.form-actions-protip');
       _this.close = _this.actions.querySelector('.js-comment-and-button');
-      _this.comment = _this.actions.querySelector('.primary');
+      _this.comment = _this.actions.querySelector('.btn-primary');
       return _this.textarea = commentForm.querySelector('textarea');
     };
   })(this);
