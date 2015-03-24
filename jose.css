@@ -6,11 +6,12 @@
   clear: both;
 }
 
-.jose-vs-oss .button {
+.jose-vs-oss .btn {
   float: inherit !important;
   margin-left: -1px !important;
+  margin-right: 0 !important;
 }
 
-.jose-vs-oss .button img {
+.jose-vs-oss .btn img {
   vertical-align: sub;
 }
