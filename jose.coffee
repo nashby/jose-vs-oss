@@ -28,7 +28,7 @@ if commentForm
     btn = document.createElement 'button'
 
     btn.innerHTML = text
-    btn.className = 'button'
+    btn.className = 'btn'
     btn.setAttribute 'tabindex', '1'
     btn.setAttribute 'type', 'submit'
     btn.setAttribute 'title', innerHtml
@@ -52,7 +52,7 @@ if commentForm
     closeButtonGroupTitle.textContent   = 'Close this issue'
 
     closeButtonGroup            = document.createElement 'div'
-    closeButtonGroup.className  = 'button-group'
+    closeButtonGroup.className  = 'btn-group'
     closeButtonGroup.setAttribute 'style', 'float: left; margin: -35px 0px 0px 0px;'
 
     openButtonGroupTitle              = document.createElement 'span'
@@ -60,7 +60,7 @@ if commentForm
     openButtonGroupTitle.textContent  = 'Keep it open'
 
     openButtonGroup             = document.createElement 'div'
-    openButtonGroup.className   = 'button-group'
+    openButtonGroup.className   = 'btn-group'
 
     if @close
       openButtonGroup.setAttribute  'style', 'float: left; margin: -35px 0px 0px 130px;'
