@@ -1,3 +1,6 @@
+### 0.57
+  * New Github layout compatibility. Thanks to [@lucasmazza](http://github.com/lucasmazza)
+
 ### 0.56
   * Fix styles and images in the firefox extension.
 
